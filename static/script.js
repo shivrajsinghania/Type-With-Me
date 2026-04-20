@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     "Cricket is more than just a game in many countries; it is an emotion.",
     "Gaming has become a major part of modern entertainment."
   ]
-
+  
+  let text = paragraphs[Math.floor(Math.random() * paragraphs.length)] 
   // create spans
   text.split("").forEach(char => {
     let span = document.createElement("span")
