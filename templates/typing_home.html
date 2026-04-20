@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type With Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body tabindex="0">
+    
+    <div id="navbar">
+      <span>WPM: <span id="wpm">0</span></span>
+      <span>Accuracy: <span id="accuracy">100</span>%</span>
+      <span>Time: <span id="time">0</span>s</span>
+    </div>
+    <div id="modes">
+      <button onclick="setPage(1)">1 Page</button>
+      <button onclick="setPage(2)">2 Pages</button>
+      <button onclick="setPage(3)">3 Pages</button>
+    </div>
+    
+    <h2>
+      Typing Practice
+    </h2>
+    <p id="text"></p>
+    
+    <div id="resultBox" style="display: none;">
+      <h2>TEST RESULT:</h2>
+      <p>WPM: <span id="finalWPM"></span></p>
+      <p>Accuracy: <span id="finalAccuracy"></span>%</p>
+      <p>Time: <span id="finalTime"></span>s</p>
+      <p>Performance: <span id="comparison"></span></p>
+      
+      <button onclick="restartTest()">Restart</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
