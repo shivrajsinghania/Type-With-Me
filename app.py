@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 import sqlite3
 
@@ -41,7 +42,7 @@ def save_result():
 		
 @app.route("/")
 def home():
-	return render_template("typing[home].html")
+	return render_template("typing_home.html")
 	
 @app.route("/last_result")
 def last_result():
@@ -58,5 +59,7 @@ def last_result():
 	else:
 		return jsonify({"wpm": None, "accuracy": None})
 
+port = int(os.environ.get("PORT", 5000))
+
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(host="0.0.0.0", port=port)
