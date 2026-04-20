@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+#text span {
+  color: #aaa;
+  font-weight: normal;
+  font-size: 20px;
+  margin: auto;
+}
+#text span.correct {
+  color: green;
+  font-weight: bold;
+}
+#text span.wrong {
+  color: red;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.current {
+  text-decoration: underline;
+  border-bottom: 2px solid black;
+}
+#navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 18px;
+}
+#resultBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
