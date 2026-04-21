@@ -1,45 +1,124 @@
+/* RESET */
 body {
-  font-family: Arial;
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 20px;
+  margin: 0;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* NAVBAR */
+#navbar {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: white;
+  padding: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* MODE BUTTONS */
+#modes {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modes button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#modes button:hover {
+  background: #333;
+}
+
+/* TEXT AREA */
+#text {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+/* DEFAULT TEXT */
 #text span {
   color: #aaa;
   font-weight: normal;
-  font-size: 20px;
-  margin: auto;
-}
-#text span.correct {
-  color: green;
-  font-weight: bold;
-}
-#text span.wrong {
-  color: red;
-  font-weight: bold;
   transition: 0.2s;
 }
+
+/* CORRECT */
+#text span.correct {
+  color: #00c853;
+  font-weight: bold;
+}
+
+/* WRONG */
+#text span.wrong {
+  color: #ff3d00;
+  font-weight: bold;
+}
+
+/* CURRENT LETTER */
 .current {
-  text-decoration: underline;
   border-bottom: 2px solid black;
 }
-#navbar {
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  font-size: 18px;
-}
+
+/* RESULT BOX */
 #resultBox {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   
-  padding: 20px;
   background: white;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: none;
+}
+
+#resultBox h2 {
+  margin-bottom: 15px;
+}
+
+#resultBox button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  #text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #navbar {
+    font-size: 14px;
+  }
 }
